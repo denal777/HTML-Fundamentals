@@ -98,35 +98,35 @@
 		   </tr>
 		  </table>
 		<hr>
-		<form name="Form"> 
+		<form name="Summary"> 
 			<fieldset>
    				<legend>Личные данные</legend>
-   					Фамилия
+   					<label>Фамилия</label>
 					<input autofocus type="text" name="Surname" size="20" maxlength="20" tabindex="10" pattern="([А-ЯЁ][а-яё]+[\-\s]?)"><br><br>
-					Имя
+					<label>Имя</label>
 					<input type="text" name="Name" size="20" maxlength="20" tabindex="20" pattern="([А-ЯЁ][а-яё]+[\-\s]?)"><br><br>
-					Отчество
+					<label>Отчество</label>
 					<input type="text" name="MiddleName" size="20" maxlength="20" tabindex="30" pattern="([А-ЯЁ][а-яё]+[\-\s]?)"><br><br>
-					Пол
+					<label>Пол</label>
 					<input type="radio" name="Sex" value="male" tabindex="40">
-					мужской
+					<label>мужской</label>
 					<input type="radio" name="Sex" value="female" tabindex="50">
-					женский<br><br>
-					Возраст
+					<label>женский</label><br><br>
+					<label>Возраст</label>
 					<input type="number" name="Age" min="1" max="150" step="1" tabindex="60" pattern="[0-9]{,3}"><br><br>
-					Страна проживания
+					<label>Страна проживания</label>
 					<input type="text" name="Country" size="20" maxlength="50" placeholder="datalist" tabindex="70">
 					<br><br>
-					Город
+					<label>Город</label>
 					<input type="checkbox" name="Town" value="rzn" tabindex="80">
-					Рязань
+					<label>Рязань</label>
 					<input type="checkbox" name="Town" value="msc" tabindex="90">
-					Москва<br><br>
-					Фото
+					<label>Москва</label><br><br>
+					<label>Фото</label>
 					<input type="file" name="Photo" size="20" tabindex="100"><br><br>
 			</fieldset>
 			<fieldset>
-   					Профессия
+   					<label>Профессия</label>
 					<select name="Profession" size="6" tabindex="110">     
 						<optgroup label="Информационные технологии и интернет">     
 							<option value="1">Web мастер</option>     
@@ -138,20 +138,21 @@
 						 <option value="5">Руководство бухгалтерией</option>     
 						 <option value="6">Бюджетирование и планирование</option>    
 					</select><br><br>
-					Зарплата
-					<input type="range" name="Pay" min="0" max="300000" step="1000" tabindex="120" pattern="^[ 0-9]+$"><br><br>
+					<label>Зарплата</label>
+					<input type="range" name="PayLevel" id="Pay" min="0" max="100000" step="1000" value="0" tabindex="120" pattern="^[ 0-9]+$" onchange="rangevalue.value=value">
+					<output id="rangevalue">0</output><br><br>
 					<textarea name="History" cols="50" rows="10" wrap="soft" tabindex="130" placeholder="Расскажите немного о себе..."></textarea><br><br>
 			</fieldset>
 			<fieldset>
    				<legend>Контактная информация</legend>
-   					Сайт
+   					<label>Сайт</label>
 					<input type="url" name="Url" size="20" maxlength="30" tabindex="140"><br><br>
-					Email
+					<label>Email</label>
 					<input type="email" name="Email" size="20" maxlength="30" tabindex="150"><br><br>
-					Телефон
+					<label>Телефон</label>
 					<input type="text" name="Phone" size="20" maxlength="30" tabindex="160" pattern="^[ 0-9]+$"><br><br>
 			</fieldset><br><br>
-			Пароль
+			<label>Пароль</label>
 			<input type="text" name="Pass" size="20" maxlength="30" tabindex="170"><br><br>
 			<input type="submit" name="Submit" value="Отправить"> 
 			<input type="reset" name="Reset" value="Очистить"><br><br>
