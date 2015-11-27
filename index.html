@@ -101,61 +101,62 @@
 		<form name="Summary"> 
 			<fieldset>
    				<legend>Личные данные</legend>
-   					<label>Фамилия</label>
-					<input autofocus type="text" name="Surname" size="20" maxlength="20" tabindex="10" pattern="([А-ЯЁ][а-яё]+[\-\s]?)"><br><br>
-					<label>Имя</label>
-					<input type="text" name="Name" size="20" maxlength="20" tabindex="20" pattern="([А-ЯЁ][а-яё]+[\-\s]?)"><br><br>
-					<label>Отчество</label>
-					<input type="text" name="MiddleName" size="20" maxlength="20" tabindex="30" pattern="([А-ЯЁ][а-яё]+[\-\s]?)"><br><br>
-					<label>Пол</label>
-					<input type="radio" name="Sex" value="male" tabindex="40">
-					<label>мужской</label>
-					<input type="radio" name="Sex" value="female" tabindex="50">
-					<label>женский</label><br><br>
-					<label>Возраст</label>
-					<input type="number" name="Age" min="1" max="150" step="1" tabindex="60" pattern="[0-9]{,3}"><br><br>
-					<label>Страна проживания</label>
-					<input type="text" name="Country" size="20" maxlength="50" placeholder="datalist" tabindex="70">
+   					<label for="Surname">Фамилия</label>
+					<input autofocus type="text" name="Surname" id="Surname" size="20" maxlength="20" tabindex="10" pattern="([А-ЯЁ][а-яё]+[\-\s]?)"><br><br>
+					<label for="Name">Имя</label>
+					<input type="text" name="Name" id="Name" size="20" maxlength="20" tabindex="20" pattern="([А-ЯЁ][а-яё]+[\-\s]?)"><br><br>
+					<label for="MiddleName">Отчество</label>
+					<input type="text" name="MiddleName" id="MiddleName" size="20" maxlength="20" tabindex="30" pattern="([А-ЯЁ][а-яё]+[\-\s]?)"><br><br>
+					<label for="male">Пол</label>
+					<input type="radio" name="Sex" id="male" value="male" tabindex="40">
+					<label for="male">мужской</label>
+					<input type="radio" name="Sex" id="female" value="female" tabindex="50">
+					<label for="female">женский</label><br><br>
+					<label for="Age">Возраст</label>
+					<input type="number" name="Age" id="Age" min="1" max="150" step="1" tabindex="60" pattern="[0-9]{,3}"><br><br>
+					<label for="Country">Страна проживания</label>
+					<input type="text" name="Country" id="Country" size="20" maxlength="50" placeholder="datalist" tabindex="70">
 					<br><br>
-					<label>Город</label>
-					<input type="checkbox" name="Town" value="rzn" tabindex="80">
-					<label>Рязань</label>
-					<input type="checkbox" name="Town" value="msc" tabindex="90">
-					<label>Москва</label><br><br>
-					<label>Фото</label>
-					<input type="file" name="Photo" size="20" tabindex="100"><br><br>
+					<label for="Rzn">Город</label>
+					<input type="checkbox" name="Rzn" id="Rzn" value="rzn" tabindex="80">
+					<label for="Rzn">Рязань</label>
+					<input type="checkbox" name="Msc" id="Msc" value="msc" tabindex="90">
+					<label for="Msc">Москва</label><br><br>
+					<label for="Photo">Фото</label>
+					<input type="file" name="Photo" id="Photo" size="20" tabindex="100"><br><br>
 			</fieldset>
 			<fieldset>
-   					<label>Профессия</label>
-					<select name="Profession" size="6" tabindex="110">     
+   					<label for="Profession">Профессия</label>
+					<select name="Profession" id="Profession" size="6" tabindex="110">     
 						<optgroup label="Информационные технологии и интернет">     
 							<option value="1">Web мастер</option>     
 							<option value="2">Администратор баз данных</option>     
 							<option value="3">Системы автоматизированного проектирования</option>    
 						</optgroup>     
 						<optgroup label="Бухгалтерия, управленческий учет, финансы предприятия">    
-						 <option value="4">Планово-экономическое управление</option>   
-						 <option value="5">Руководство бухгалтерией</option>     
-						 <option value="6">Бюджетирование и планирование</option>    
+							<option value="4">Планово-экономическое управление</option>   
+							<option value="5">Руководство бухгалтерией</option>     
+							<option value="6">Бюджетирование и планирование</option>  
+						</optgroup>  
 					</select><br><br>
-					<label>Зарплата</label>
+					<label for="Pay">Зарплата</label>
 					<input type="range" name="PayLevel" id="Pay" min="0" max="100000" step="1000" value="0" tabindex="120" pattern="^[ 0-9]+$" onchange="rangevalue.value=value">
 					<output id="rangevalue">0</output><br><br>
 					<textarea name="History" cols="50" rows="10" wrap="soft" tabindex="130" placeholder="Расскажите немного о себе..."></textarea><br><br>
 			</fieldset>
 			<fieldset>
    				<legend>Контактная информация</legend>
-   					<label>Сайт</label>
-					<input type="url" name="Url" size="20" maxlength="30" tabindex="140"><br><br>
-					<label>Email</label>
-					<input type="email" name="Email" size="20" maxlength="30" tabindex="150"><br><br>
-					<label>Телефон</label>
-					<input type="text" name="Phone" size="20" maxlength="30" tabindex="160" pattern="^[ 0-9]+$"><br><br>
+   					<label for="Url">Сайт</label>
+					<input type="url" name="Url" id="Url" size="20" maxlength="30" tabindex="140"><br><br>
+					<label for="Email">Email</label>
+					<input type="email" name="Email" id="Email" size="20" maxlength="30" tabindex="150"><br><br>
+					<label for="Phone">Телефон</label>
+					<input type="text" name="Phone" id="Phone" size="20" maxlength="30" tabindex="160" pattern="^[ 0-9]+$"><br><br>
 			</fieldset><br><br>
-			<label>Пароль</label>
-			<input type="text" name="Pass" size="20" maxlength="30" tabindex="170"><br><br>
-			<input type="submit" name="Submit" value="Отправить"> 
-			<input type="reset" name="Reset" value="Очистить"><br><br>
+			<label for="Pass">Пароль</label>
+			<input type="text" name="Pass" id="Pass" size="20" maxlength="30" tabindex="170"><br><br>
+			<input type="submit" name="Submit" id="Submit" value="Отправить"> 
+			<input type="reset" name="Reset" id="Reset" value="Очистить"><br><br>
 		</form>
 	</body>
 </html>
